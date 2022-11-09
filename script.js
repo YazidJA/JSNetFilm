@@ -30,7 +30,7 @@ const mapMovies = (arr) => {
       <div class="movie">
       <a href="https://www.themoviedb.org/movie/${i.id}"><img src= "https://image.tmdb.org/t/p/w1280${i.poster_path}" alt="" /></a>
     <div class="movie-info">
-      <h3>${i.original_title}</h3>
+      <h3>${i.title}</h3>
       <span class="${color}">${i.vote_average}</span>
     </div>
     <div class="overview">
