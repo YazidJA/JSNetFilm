@@ -27,8 +27,8 @@ const mapMovies = (arr) => {
     .map((i) => {
       const color = colorFunction(i.vote_average);
       return `
-      <div class="movie">
-      <a href="https://www.themoviedb.org/movie/${i.id}"><img src= "https://image.tmdb.org/t/p/w1280${i.poster_path}" alt="" /></a>
+      <a href="https://www.themoviedb.org/movie/${i.id}"><div class="movie">
+      <img src= "https://image.tmdb.org/t/p/w1280${i.poster_path}" alt="" />
     <div class="movie-info">
       <h3>${i.title}</h3>
       <span class="${color}">${i.vote_average}</span>
@@ -37,7 +37,7 @@ const mapMovies = (arr) => {
       <h3>Overview</h3>
       ${i.overview}
     </div>
-    </div>`;
+    </div></a>`;
     })
     .join("");
 };
